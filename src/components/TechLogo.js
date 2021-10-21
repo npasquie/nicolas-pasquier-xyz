@@ -19,7 +19,7 @@ export default function TechLogo({i}){
 	useEffect(()=>{
 		const timerOn = setTimeout(() => setFade(true), blankTime)
 		const timerOff = setTimeout(() => setFade(false), blankTime + displayTime)
-		const timerChange = setTimeout(() => setLogoDisplayIndex(logoDisplayIndex + 1), blankTime + displayTime + fadeTime)
+		const timerChange = setTimeout(() => setLogoDisplayIndex(logoDisplayIndex + 3), blankTime + displayTime + fadeTime)
     return () => {
 			clearTimeout(timerOn)
 			clearTimeout(timerOff)

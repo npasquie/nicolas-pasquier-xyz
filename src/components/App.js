@@ -1,7 +1,8 @@
-import { Container, Row, Col, Image, Button, Navbar, Fade } from "react-bootstrap"
+import { Container, Row, Col, Image, Button, Navbar } from "react-bootstrap"
 import meImg from "../assets/me.png"
 import "./styles.css"
 import TechLogo from "./TechLogo"
+import TechDemo from "./TechDemo"
 
 export default function App(){
 	return(<>
@@ -34,8 +35,9 @@ export default function App(){
 			</Row>
 		</Container>
 		<div className="demo">
-			<Container >
-				<Button variant="light"><div className="demoButton">Try a Blockchain Transaction</div></Button>
+			<Container>
+				Try a Tech Demo :<br/>
+				<TechDemo/>
 			</Container>
 		</div>
 	</>)
