@@ -3,7 +3,8 @@ import Web3 from "web3"
 import { privateKey } from "../secret.json"
 import * as skinsAbi from "../assets/skinsAbi.json"
 import { useState } from "react"
-import { Button, Spinner } from "react-bootstrap"
+import { Button, Row, Col } from "react-bootstrap"
+import Skin from "./Skin"
 
 const TwentyGwei = '20000000000'
 const skinsAddress = "0x445E7AB3d6c000b8fDe27aa11437a8813D9C8aed"
@@ -27,7 +28,6 @@ export default function TechDemo(){
 	async function sendMint(){
 		const skins = new web3.eth.Contract(skinsAbi.default, skinsAddress)
 		const mintOne = skins.methods.mint()
-		console.log(mintOne);
 		const accounts = await web3.eth.getAccounts()
     let gas = await mintOne.estimateGas({from: accounts[0]})
     let tx = await mintOne.send({from: accounts[0], gas: gas, gasPrice: TwentyGwei})
@@ -42,17 +42,25 @@ export default function TechDemo(){
 	}
 
 	return(<>
-	<Button variant="light" onClick={sendMint} disabled={txInfo.state === ERROR || txInfo.state !== NOT_SENT}>
-		<div className="demoButton">
-			{txInfo.state === NOT_SENT && <>Try a Blockchain Transaction</>}
-			{txInfo.state === SENDING && 
-				<>Sending the transaction ... <Spinner variant="light" animation="border"/></>}
-			{txInfo.state === SENT && 
-				<>Mining the transaction ... <Spinner variant="light" animation="border"/></>}
-			{txInfo.state === MINED && <>Try Again !</>}
-			{txInfo.state === ERROR && <>Something went wrong :(</>}
-		</div>
-	</Button>
-	{txInfo.state === ERROR && <>Open the console for error info.</>}
+		<Row>
+		<Button variant="light" onClick={sendMint} disabled={
+				txInfo.state === ERROR || txInfo.state === SENT || txInfo.state === SENDING}>
+			<div className="demoButton">
+				{txInfo.state === NOT_SENT && <>What does this button ?</>}
+				{txInfo.state === SENDING && 
+					<>Sending the transaction ...</>}
+				{txInfo.state === SENT && 
+					<>Mining the transaction ...</>}
+				{txInfo.state === MINED && <>Try Again !</>}
+				{txInfo.state === ERROR && <>Something went wrong :(</>}
+			</div>
+		</Button>
+		</Row>
+		{txInfo.state === ERROR && <Col>Open the console for error info.</Col>}
+		{txInfo.state === MINED && 
+		<Row><Col></Col><Col><Row>
+			<div className="minted">You just minted a NFT !</div>
+		</Row></Col><Col></Col></Row>}
+		{txInfo.state === MINED && skinId && <Skin id={skinId} hash={txInfo.hash}/>}
 	</>)
 }

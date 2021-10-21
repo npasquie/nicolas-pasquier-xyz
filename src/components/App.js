@@ -36,7 +36,7 @@ export default function App(){
 		</Container>
 		<div className="demo">
 			<Container>
-				Try a Tech Demo :<br/>
+				<div className="important">Try a Tech Demo !</div><br/><br/>
 				<TechDemo/>
 			</Container>
 		</div>
