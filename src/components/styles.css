@@ -13,7 +13,6 @@
 
 .navBarTitle{
     font-weight: bolder;
-    margin-left: 2em;
 }
 
 .meImg{
@@ -86,4 +85,9 @@
     text-align: center;
     padding-top: 1em;
     margin-bottom: 1em;
+}
+
+.imageLink{
+    width: 2.5em;
+    margin: 0.35em;
 }

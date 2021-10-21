@@ -1,13 +1,32 @@
-import { Container, Row, Col, Image, Button, Navbar } from "react-bootstrap"
+import { Container, Row, Col, Image, Button, Navbar, OverlayTrigger, Tooltip } from "react-bootstrap"
 import meImg from "../assets/me.png"
 import "./styles.css"
 import TechLogo from "./TechLogo"
 import TechDemo from "./TechDemo"
+import ImageLink from "./ImageLink"
+import gith1 from "../assets/github1.png"
+import gith2 from "../assets/github2.png"
+import linkedin from "../assets/linkedin.png"
+import telegram from "../assets/telegram.png"
+import medium from "../assets/medium.png"
+import twitter from "../assets/twitter.png"
 
 export default function App(){
 	return(<>
 		<Navbar bg="dark" variant="dark">
+		<Container>
 			<Navbar.Brand className="navBarTitle">nicolas.pasquier.xyz</Navbar.Brand>
+				<Col></Col><Col md="auto">
+					<ImageLink link="https://github.com/npasquie" src={gith1}/>
+					<ImageLink link="https://github.com/t0bou" src={gith2}/>
+					<ImageLink link="https://www.linkedin.com/in/nicopasquier/" src={linkedin}/>
+					<ImageLink link="https://medium.com/@tobou" src={medium}/>
+					<ImageLink link="https://twitter.com/t0bou" src={twitter}/>
+					<OverlayTrigger placement="bottom" overlay={<Tooltip>@t0bou</Tooltip>}>
+						<Image className="imageLink" src={telegram}/>
+					</OverlayTrigger>
+				</Col>
+			</Container>
 		</Navbar>
 		<Container className="main">
 			<Row>
@@ -15,7 +34,9 @@ export default function App(){
 					<div className="slogan">Bring your Blockchain idea to life</div>
 					<div className="titleP">I'm a French Blockchain Engineer<br/>
 					I do <div className="important">Fullstack Dapp development, from Smart Contract to WebApp</div></div><br/>
-					<Button variant="dark" size="lg"><div className="callButton">👉 Schedule a Call 👈</div></Button>
+					<Button variant="dark" size="lg"
+						onClick={()=>{window.location.href = "https://calendly.com/nicolas-pasquier/30min"}}>
+						<div className="callButton">👉 Schedule a Call 👈</div></Button>
 				</Col>
 				<Col className="titlePart">
 					<Image className="meImg" src={meImg}/>
