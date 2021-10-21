@@ -3,7 +3,7 @@ import Web3 from "web3"
 import { privateKey } from "../secret.json"
 import * as skinsAbi from "../assets/skinsAbi.json"
 import { useState } from "react"
-import { Button, Row, Col } from "react-bootstrap"
+import { Button, Row, Col, Spinner } from "react-bootstrap"
 import Skin from "./Skin"
 
 const TwentyGwei = '20000000000'
@@ -61,6 +61,7 @@ export default function TechDemo(){
 		<Row><Col></Col><Col><Row>
 			<div className="minted">You just minted a NFT !</div>
 		</Row></Col><Col></Col></Row>}
+		{txInfo.state === MINED && !skinId && <Spinner animation="border" variant="light"/>}
 		{txInfo.state === MINED && skinId && <Skin id={skinId} hash={txInfo.hash}/>}
 	</>)
 }
