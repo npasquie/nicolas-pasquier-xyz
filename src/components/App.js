@@ -1,17 +1,9 @@
 import { Container, Row, Col, Image, Button, Navbar, Fade } from "react-bootstrap"
 import meImg from "../assets/me.png"
 import "./styles.css"
-import docker from "../assets/docker.png"
-import hardhat from "../assets/hardhat.png"
-import react from "../assets/react.png"
-import solidity from "../assets/solidity.png"
-import web3js from "../assets/web3js.png"
-import node from "../assets/node.png"
-import mongodb from "../assets/mongodb.jpg"
+import TechLogo from "./TechLogo"
 
 export default function App(){
-	const logos = [docker, hardhat, react, solidity, web3js, node, mongodb]
-
 	return(<>
 		<Navbar bg="dark" variant="dark">
 			<Navbar.Brand className="navBarTitle">nicolas.pasquier.xyz</Navbar.Brand>
@@ -39,11 +31,7 @@ export default function App(){
 		</div>
 		<Container className="techLogos">
 			<Row className="logoRow">
-				{logos.splice(0,4).map((logo,i) => <Col>
-						<Fade in={true} key={i}>
-							<Image className="logoImg" src={logo}/>
-						</Fade>
-					</Col>)}
+				{[0,1,2,3].map(index => <TechLogo key={index} i={index}/>)}
 			</Row>
 		</Container>
 	</>)
