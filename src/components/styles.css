@@ -1,0 +1,29 @@
+h1{
+    font-weight: bolder;
+    font-size: 3.2em;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+.main{
+    margin-top: 1em;
+}
+
+.meImg{
+    border-radius: 50%;
+    border: 0.7em solid;
+    border-color: black;
+    width: 15em;
+}
+
+.important{
+    display: inline;
+    font-weight: bolder;
+}
+
+.titlePart{
+    display: table-cell;
+    vertical-align: middle;
+}
