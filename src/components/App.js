@@ -1,8 +1,17 @@
-import { Container, Row, Col, Image, Button, Navbar } from "react-bootstrap"
+import { Container, Row, Col, Image, Button, Navbar, Fade } from "react-bootstrap"
 import meImg from "../assets/me.png"
 import "./styles.css"
+import docker from "../assets/docker.png"
+import hardhat from "../assets/hardhat.png"
+import react from "../assets/react.png"
+import solidity from "../assets/solidity.png"
+import web3js from "../assets/web3js.png"
+import node from "../assets/node.png"
+import mongodb from "../assets/mongodb.jpg"
 
 export default function App(){
+	const logos = [docker, hardhat, react, solidity, web3js, node, mongodb]
+
 	return(<>
 		<Navbar bg="dark" variant="dark">
 			<Navbar.Brand className="navBarTitle">nicolas.pasquier.xyz</Navbar.Brand>
@@ -20,16 +29,22 @@ export default function App(){
 				</Col>
 			</Row>
 		</Container>
-		<Row className="infos">
-			<Container>
-				<Container>
-					<br/>
-					<p>I have <div className="important">3+ years of experience</div> in Fullstack & Blockain development<br/>
-					Projects I worked on includes <div className="important">NFTs, Coins, Auctions, Vote ...</div><br/><br/>
-					I mastered those technologies :
-					</p>
-				</Container>
+		<div className="infos">
+			<Container >
+				<br/>
+				I have <div className="important">3+ years of experience</div> in Fullstack & Blockain development<br/>
+				Projects I worked on includes <div className="important">NFTs, Coins, Auctions, Vote ...</div><br/><br/>
+				I mastered those technologies :
 			</Container>
-		</Row>
+		</div>
+		<Container className="techLogos">
+			<Row className="logoRow">
+				{logos.splice(0,4).map((logo,i) => <Col>
+						<Fade in={true} key={i}>
+							<Image className="logoImg" src={logo}/>
+						</Fade>
+					</Col>)}
+			</Row>
+		</Container>
 	</>)
 }

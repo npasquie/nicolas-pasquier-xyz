@@ -39,6 +39,21 @@ h1{
 
 .infos{
     margin-top: 1em;
+    padding-bottom: 1em;
     background-color: black;
     color: white;
+}
+
+.techLogos{
+    margin-top: 1em;
+    vertical-align: middle;
+}
+
+.logoImg{
+    width: 15em;
+    height: 15em;
+}
+
+.logoRow{
+    vertical-align: middle;
 }
