@@ -11,7 +11,7 @@ export default function App(){
 			<Row>
 				<Col sm={8} className="titlePart">
 					<h1>Bring your Blockchain idea to life</h1>
-					<p>I'm a French Blockchain Engineer<br/>
+					<p className="titleP">I'm a French Blockchain Engineer<br/>
 					I do <div className="important">Fullstack Dapp development, from Smart Contract to WebApp</div></p>
 					<Button className="callButton" variant="dark" size="lg">Schedule a Call</Button>
 				</Col>
@@ -20,5 +20,16 @@ export default function App(){
 				</Col>
 			</Row>
 		</Container>
+		<Row className="infos">
+			<Container>
+				<Container>
+					<br/>
+					<p>I have <div className="important">3+ years of experience</div> in Fullstack & Blockain development<br/>
+					Projects I worked on includes <div className="important">NFTs, Coins, Auctions, Vote ...</div><br/><br/>
+					I mastered those technologies :
+					</p>
+				</Container>
+			</Container>
+		</Row>
 	</>)
 }

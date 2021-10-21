@@ -3,7 +3,7 @@ h1{
     font-size: 3.2em;
 }
 
-p{
+.titleP{
     font-size: 1.5em;
 }
 
@@ -35,4 +35,10 @@ p{
 
 .callButton{
     font-weight: bolder;
+}
+
+.infos{
+    margin-top: 1em;
+    background-color: black;
+    color: white;
 }
