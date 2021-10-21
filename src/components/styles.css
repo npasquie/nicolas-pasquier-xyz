@@ -1,10 +1,10 @@
-h1{
+.slogan{
     font-weight: bolder;
-    font-size: 3.2em;
+    font-size: 3.4em;
 }
 
 .titleP{
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 .main{
@@ -20,7 +20,7 @@ h1{
     border-radius: 50%;
     border: 0.7em solid;
     border-color: black;
-    width: 15em;
+    width: 20em;
 }
 
 .important{
@@ -35,10 +35,13 @@ h1{
 
 .callButton{
     font-weight: bolder;
+    font-size: 1.5em;
 }
 
 .infos{
+    font-size: 1.5em;
     margin-top: 1em;
+    padding-top: 1em;
     padding-bottom: 1em;
     background-color: black;
     color: white;
@@ -56,4 +59,18 @@ h1{
 
 .logoRow{
     vertical-align: middle;
+}
+
+.demo{
+    font-size: 1.5em;
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 4em;
+    background-color: black;
+    color: white;
+}
+
+.demoButton{
+    font-weight: bolder;
+    font-size: 1.3em;
 }

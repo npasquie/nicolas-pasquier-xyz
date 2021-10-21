@@ -30,7 +30,7 @@ export default function TechLogo({i}){
 	return(<>
 		<Col>
 			<Fade in={fade}>
-				<Image className="logoImg" src={logos[logoDisplayIndex % (logos.length - 1)]}/>
+				<Image className="logoImg" src={logos[logoDisplayIndex % (logos.length)]}/>
 			</Fade>
 		</Col>
 	</>)
