@@ -11,6 +11,11 @@ p{
     margin-top: 1em;
 }
 
+.navBarTitle{
+    font-weight: bolder;
+    margin-left: 2em;
+}
+
 .meImg{
     border-radius: 50%;
     border: 0.7em solid;
@@ -26,4 +31,8 @@ p{
 .titlePart{
     display: table-cell;
     vertical-align: middle;
+}
+
+.callButton{
+    font-weight: bolder;
 }
