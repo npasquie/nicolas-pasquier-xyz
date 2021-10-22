@@ -46,7 +46,7 @@ export default function TechDemo(){
 		<Button variant="light" onClick={sendMint} disabled={
 				txInfo.state === ERROR || txInfo.state === SENT || txInfo.state === SENDING}>
 			<div className="demoButton">
-				{txInfo.state === NOT_SENT && <>What does this button ?</>}
+				{txInfo.state === NOT_SENT && <>What does this button ? 🤔</>}
 				{txInfo.state === SENDING && 
 					<>Sending the transaction ...</>}
 				{txInfo.state === SENT && 

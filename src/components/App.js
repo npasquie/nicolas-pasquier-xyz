@@ -30,6 +30,9 @@ export default function App(){
 		</Navbar>
 		<Container className="main">
 			<Row>
+				<Col className="titlePart">
+					<Image className="meImg" src={meImg}/>
+				</Col>
 				<Col sm={8} className="titlePart">
 					<div className="slogan">Bring your Blockchain idea to life</div>
 					<div className="titleP">I'm a French Blockchain Engineer<br/>
@@ -37,9 +40,6 @@ export default function App(){
 					<Button variant="dark" size="lg"
 						onClick={()=>{window.location.href = "https://calendly.com/nicolas-pasquier/30min"}}>
 						<div className="callButton">👉 Schedule a Call 👈</div></Button>
-				</Col>
-				<Col className="titlePart">
-					<Image className="meImg" src={meImg}/>
 				</Col>
 			</Row>
 		</Container>
