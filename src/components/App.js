@@ -45,7 +45,7 @@ export default function App(){
 		</Container>
 		<div className="infos">
 			<Container >
-				I have <div className="important">3+ years of experience</div> in Fullstack & Blockain development<br/>
+				I have <div className="important">3+ years of experience</div> in Fullstack & Blockchain development<br/>
 				Blockchain Projects I worked on includes <div className="important">NFTs, Coins, Auctions, Votes ...</div><br/><br/>
 				I work with those technologies daily :
 			</Container>
