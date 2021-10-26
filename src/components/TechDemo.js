@@ -43,6 +43,12 @@ export default function TechDemo(){
 
 	return(<>
 		<Row>
+		{txInfo.state === MINED && 
+		<Row><Col></Col><Col><Row>
+			<div className="minted">You just minted a NFT !</div>
+			{!skinId && <Spinner animation="border" variant="light"/>}
+		</Row></Col><Col></Col></Row>}
+		{txInfo.state === MINED && skinId && <Skin id={skinId} hash={txInfo.hash}/>}
 		<Button variant="light" onClick={sendMint} disabled={
 				txInfo.state === ERROR || txInfo.state === SENT || txInfo.state === SENDING}>
 			<div className="demoButton">
@@ -57,11 +63,5 @@ export default function TechDemo(){
 		</Button>
 		</Row>
 		{txInfo.state === ERROR && <Col>Open the console for error info.</Col>}
-		{txInfo.state === MINED && 
-		<Row><Col></Col><Col><Row>
-			<div className="minted">You just minted a NFT !</div>
-		</Row></Col><Col></Col></Row>}
-		{txInfo.state === MINED && !skinId && <Spinner animation="border" variant="light"/>}
-		{txInfo.state === MINED && skinId && <Skin id={skinId} hash={txInfo.hash}/>}
 	</>)
 }

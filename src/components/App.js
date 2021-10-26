@@ -52,7 +52,7 @@ export default function App(){
 		</div>
 		<Container className="techLogos">
 			<Row className="logoRow">
-				{[0,1,2,3].map(index => <TechLogo key={index} i={index}/>)}
+				{[...Array(6).keys()].map(index => <TechLogo key={index} i={index}/>)}
 			</Row>
 		</Container>
 		<div className="demo">

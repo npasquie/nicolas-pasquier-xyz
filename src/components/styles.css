@@ -53,8 +53,8 @@
 }
 
 .logoImg{
-    width: 15em;
-    height: 15em;
+    width: 10em;
+    height: 10em;
 }
 
 .logoRow{
@@ -79,12 +79,11 @@
     width: 15em;
     font-size: 0.7em;
     padding: 0.7em;
+    margin-bottom: 1em;
 }
 
 .minted{
     text-align: center;
-    padding-top: 1em;
-    margin-bottom: 1em;
 }
 
 .imageLink{
