@@ -79,6 +79,14 @@
     color: white;
 }
 
+.services{
+    font-size: 2em;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    font-weight: bolder;
+    text-align: center;
+}
+
 .demoButton{
     font-weight: bolder;
     font-size: 1.3em;
@@ -97,5 +105,33 @@
 
 .imageLink{
     width: 2.5em;
-    margin: 0.35em;
+    margin-left: 0.7em;
+}
+
+.imageLink-sm{
+    width: 1.2em;
+    margin-right: 0.3em;
+}
+
+.secondButton{
+    margin-top: 1em;
+}
+
+li{
+    margin-top: 0.7em;
+}
+
+.serviceCard{
+    margin: 1em;
+}
+
+.serviceCard-title{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.serviceCard-body{
+    font-weight: normal;
+    font-size: 0.7em;
+    background-color: rgb(232, 237, 243);
 }
